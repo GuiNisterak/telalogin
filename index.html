@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Login</title>
+</head>
+<script>
+    function showPassword(){
+        if (formLoginFieldInputPassword.type == 'password'){
+            formLoginFieldInputPassword.type = 'text';
+        }
+        else{
+            formLoginFieldInputPassword.type = 'password';
+        }
+    }
+</script>
+<body>
+    <section class="formLoginBase">
+        <div class="formLoginField">
+            <label for="">Usuário</label>
+            <input type="text" id="formLoginFieldUsername">
+        </div>
+        <div class="formLoginField">
+            <label for="">Senha</label>
+            <div class="formLoginFieldPassword">
+                <input type="password" id="formLoginFieldInputPassword">
+                <img src="ver-senha.svg" alt="btn-senha" class="formLoginFieldInputShowPassword" onclick="showPassword()">
+            </div>
+        </div>
+        <button class="formLoginBotao" onclick="criarPopularTabelaUsuarios()">Cadastrar</button>
+    </section>
+</body>
+</html>
